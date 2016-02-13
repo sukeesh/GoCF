@@ -1,6 +1,10 @@
 # GoCF
 Contest parser for codeforces ( only C++ )
 
+**Requirements**
+1. Python v2/3
+2. [Python Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
 **While Parsing Contest initially**
 
 ![alt text](1.png " Parsing test cases!")
@@ -22,13 +26,13 @@ Contest parser for codeforces ( only C++ )
 * Now, for example let us take contest code as `624` and name your problems as `624_A.cpp`, `624_B.cpp`, ... ( Case sensitive )<br>
 * Code in your favourite editor ( subl / vim / .. ) or even ide !<br>
 * Compile <br>
-* now, for testing your solution just `gocf 624_A.cpp` <br> :) 
+* now, for testing your solution just `gocf 624_A.cpp` <br>
 
 **That's it!**<br>
 
 Note : Pull requests are accepted <br>
 
-Star it <br>
+*Star it* <br>
 
 report bugs at : vsukeeshbabu[at]gmail[dot]com
 
