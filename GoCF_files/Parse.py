@@ -90,4 +90,3 @@ while jj < 5:
 	f.write(str(ch[jj]) + " " + str(chtest[jj])+'\n')
 	jj = jj + 1
 f.close()
-

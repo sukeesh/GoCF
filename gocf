@@ -2,7 +2,7 @@
 name=$1
 contest_code=${name:0:3}
 problem_code=${name:4:1}
-pathe='/home/s96/GoCF/sukeesh.txt'
+pathe='/home/'$USER'/GoCF/sukeesh.txt'
 DONE=false
 todo=0
 tot=0
@@ -18,7 +18,7 @@ while [[ $todo -lt $tot ]]
 do
 	u=1
 	todo=$((todo+1))
-	pathe='/home/s96/GoCF/'
+	pathe='/home/'$USER'/GoCF/'
 	temppath=$pathe$problem_code$todo'.in'
 	g++ $name
 	./a.out <$temppath> $pathe$problem_code$todo'.rc'

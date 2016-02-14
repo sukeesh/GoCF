@@ -1,10 +1,10 @@
 # GoCF
 Contest parser for codeforces ( only C++ )
 
-**Requirements**
-1. Python v2/3
-2. [Python Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-3. tested on Ubuntu 14.04
+**Requirements** <br>
+1. Python v2/3 <br>
+2. [Python Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)<br>
+3. tested on Ubuntu 14.04<br>
 
 **While Parsing Contest initially**
 
