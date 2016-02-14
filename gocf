@@ -13,6 +13,7 @@ do
 	tot=${line:2:1}
   fi
 done < $pathe
+g++ $name
 todo=0
 while [[ $todo -lt $tot ]]
 do
@@ -20,7 +21,6 @@ do
 	todo=$((todo+1))
 	pathe='/home/'$USER'/GoCF/'
 	temppath=$pathe$problem_code$todo'.in'
-	g++ $name
 	./a.out <$temppath> $pathe$problem_code$todo'.rc'
 	diff --brief <(sort $pathe$problem_code$todo'.out') <(sort $pathe$problem_code$todo'.rc') >/dev/null
 	comp_val=$?
