@@ -57,7 +57,7 @@ while jj<5:
 			f.close()
 		else:
 			Out=str(PRE[i])
-		 	Out=Out.replace('<pre>','').replace('</pre>','')
+			Out=Out.replace('<pre>','').replace('</pre>','')
 			Out=Out.replace('&gt;','>')
 			Out=Out.replace('&lt;','<')
 			Out=Out.replace('&quot;','"')
