@@ -2,7 +2,7 @@
 Contest parser for codeforces ( only C++ )
 
 **Requirements** <br>
-1. Python v2/3 <br>
+1. Python 2 <br>
 2. [Python Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)<br>
 3. tested on Ubuntu 14.04<br>
 
