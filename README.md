@@ -25,7 +25,7 @@ Contest parser for codeforces ( only C++ )
 * Now, enter the contest code <br>
 * GoCF will now download the test cases for you! <br>
 * Now, for example let us take contest code as `624` and name your problems as `624_A.cpp`, `624_B.cpp`, ... ( Case sensitive )<br>
-* Code in your favourite editor ( subl / vim / .. ) or even ide !<br>
+* Code in your favourite editor ( subl / vim / .. )<br>
 * Compile <br>
 * now, for testing your solution just `gocf 624_A.cpp` <br>
 
