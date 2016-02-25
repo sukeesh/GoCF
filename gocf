@@ -13,6 +13,15 @@ do
 	tot=${line:2:1}
   fi
 done < $pathe
+fla=0
+
+g++ $name || fla=1
+if [ $fla -eq 1 ]
+then
+	echo -e "\n\033[1;31m : Compilation Error\e[0m"
+	exit
+fi
+ 
 todo=0
 while [[ $todo -lt $tot ]]
 do
@@ -20,14 +29,25 @@ do
 	todo=$((todo+1))
 	pathe='/home/'$USER'/GoCF/'
 	temppath=$pathe$problem_code$todo'.in'
-	g++ $name
-	./a.out <$temppath> $pathe$problem_code$todo'.rc'
+	x=0
+	timeout 2 ./a.out <$temppath> $pathe$problem_code$todo'.rc' || x=1
 	diff --brief <(sort $pathe$problem_code$todo'.out') <(sort $pathe$problem_code$todo'.rc') >/dev/null
-	comp_val=$?
-	if [ $comp_val -eq 1 ]
+        comp_val=$?
+
+	if [ $x -eq 1 ]
 	then
-		echo -e "\e[1m Running test \e[0m"$todo"\e[91m : [Wrong Answer]\e[0m"
+		echo -e "\e[1m>>Running test "$todo"\e[0m : \033[1;34m [Time limit exceeded]\e[0m"
+	elif [ $comp_val -eq 1 ]
+	then
+		echo -e "\n"
+		echo -e "\e[1m>>Running test "$todo"\e[0m : \e[91m [Wrong Answer]\e[0m"
+		echo -e "\n\033[1;35mInput :\e[0m"
+		cat < $temppath
+		echo -e "\n\033[1;31mRecieved Ouput :\e[0m "
+		cat < $pathe$problem_code$todo'.rc'
+		echo -e "\n\033[1;32mExpected Output :\e[0m"
+                cat < $pathe$problem_code$todo'.out'
 	else
-		echo -e "\e[1m Running test \e[0m"$todo"\e[92m : [Pretest Passed]\e[0m"
+		echo -e "\e[1m>>Running test "$todo"\e[0m : \033[92m [Pretest Passed]\e[0m"
 	fi
-done 
+done

@@ -1,3 +1,4 @@
+#parse.py 'sukeesh'
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
 import urllib2
@@ -11,19 +12,23 @@ from colorama import Fore, Back, Style
 home = expanduser("~")
 
 url1 = "http://www.codeforces.com/contest/"
-print (Fore.GREEN + "\n  [[ GoCF! ]] \n" + Fore.WHITE)
+print (Fore.RED + "\n      GoCF" + Fore.GREEN + "\nGood Luck & Have fun!\n" + Fore.WHITE)
 code = int(raw_input("Contest code : "))
+
+url = url1+str(code)
+page = urllib2.urlopen(url)
+soup = BeautifulSoup(page.read())
+sz = soup.findAll('tr')
+
 url2 = "/problem/"
-ch = ['A','B','C','D','E']
-chtest = [0,0,0,0,0]
+ch = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+chtest = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 jj = 0
-while jj<5:
+while jj<len(sz)-19:
 	url = url1+str(code)+url2+str(ch[jj])
-	#print url 
 	page = urllib2.urlopen(url)
 	soup = BeautifulSoup(page.read())
-	#print (Fore.WHITE + "Parsing... " + " problem " + str(jj))
 	PRE=soup.findAll('pre')
 	L=len(PRE)
 	inde = 1
@@ -86,7 +91,7 @@ pathe = '/GoCF/sukeesh.txt'
 f = open(home+pathe,'w')
 f.write(str(code)+'\n')
 jj = 0
-while jj < 5:
+while jj < len(sz)-19:
 	f.write(str(ch[jj]) + " " + str(chtest[jj])+'\n')
 	jj = jj + 1
 f.close()
