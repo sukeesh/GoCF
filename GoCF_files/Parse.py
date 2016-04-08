@@ -12,20 +12,20 @@ from colorama import Fore, Back, Style
 home = expanduser("~")
 
 url1 = "http://www.codeforces.com/contest/"
-print (Fore.RED + "\n      GoCF" + Fore.GREEN + "\nGood Luck & Have fun!\n" + Fore.WHITE)
+print (Fore.RED + "\n      GoCF" + Fore.GREEN + "" + Fore.WHITE)
 code = int(raw_input("Contest code : "))
 
 url = url1+str(code)
 page = urllib2.urlopen(url)
 soup = BeautifulSoup(page.read())
-sz = soup.findAll('tr')
+sz = soup.findAll(title="Submit")
 
 url2 = "/problem/"
 ch = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 chtest = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-
 jj = 0
-while jj<len(sz)-19:
+print "   Connected!\n"
+while jj<len(sz):
 	url = url1+str(code)+url2+str(ch[jj])
 	page = urllib2.urlopen(url)
 	soup = BeautifulSoup(page.read())
@@ -85,13 +85,13 @@ while jj<len(sz)-19:
 			f.close()
 			inde = inde + 1
 			chtest[jj] = chtest[jj] + 1
-	print (Fore.WHITE + "parsing " + str(ch[jj])) + (Fore.GREEN + "  [Success]  ")
+	print (Fore.WHITE + "parsing " + str(ch[jj])) + (Fore.GREEN + "  [Success]  ") + (Fore.WHITE + "")
 	jj= jj + 1
 pathe = '/GoCF/sukeesh.txt'
 f = open(home+pathe,'w')
 f.write(str(code)+'\n')
 jj = 0
-while jj < len(sz)-19:
+while jj < len(sz):
 	f.write(str(ch[jj]) + " " + str(chtest[jj])+'\n')
 	jj = jj + 1
 f.close()
