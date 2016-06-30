@@ -15,7 +15,7 @@ do
 done < $pathe
 fla=0
 
-g++ $name || fla=1
+g++ -std=c++11 $name || fla=1
 if [ $fla -eq 1 ]
 then
 	echo -e "\n\033[1;31m : Compilation Error\e[0m"

@@ -1,42 +1,32 @@
 # GoCF
-Contest parser for codeforces (only C++)
+>Contest parser for codeforces (only C++)
 
-**Requirements** <br>
-1. Python v2/3 <br>
-2. [Python Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)<br>
-3. [Colorama](https://pypi.python.org/pypi/colorama)<br>
+##Requirements
 
-tested on Ubuntu 14.04<br>
+* Python v2/3 
+* [Python Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)<br>
+* [Colorama](https://pypi.python.org/pypi/colorama)<br>
 
-**While Parsing Contest initially**
+>Tested on Linux Ubuntu 14.04, Elementary OS Freya.
 
-![alt text](while_parsing.png " Parsing test cases!")
+##Installation
 
-**While testing your solution**
+* Run `./install.sh`
 
-![alt text](CE.png " Testing your Solution!")
-![alt text](WA.png " Testing your Solution!")
-![alt text](TLE.png " Testing your Solution!")
-![alt text](AC.png " Testing your Solution!")
+##Usage
 
-**How to install it?** <br>
-* copy `gocf` and `incf` file to `/bin/` directory <br>
-* give permissions to them by `sudo chmod 755 /bin/gocf` and `sudo chmod 755 /bin/incf` <br>
-* Now create a directory in your `home` folder and name it `GoCF` <br>
-* copy `Parse.py` from `GoCF_files` to `GoCF` and if neccessary do `chmod` <br>
+* After the contest begins, fire up your terminal and type `incf`
+* Now, enter the contest code
+* GoCF will now download the test cases for you!
+* Now, for example let us take contest code as `624`, name your problems as `624_A.cpp`, `624_B.cpp`, . .(Case sensitive)
+* Code in your favourite editor.
+* now, for testing your solution just `gocf 624_A.cpp`.
+* If you want to add a custom test case, `adcf` and enter problem code.
 
-**How to use it?** <br>
-* After the contest begins, fire up your terminal and type `incf` <br>
-* Now, enter the contest code <br>
-* GoCF will now download the test cases for you! <br>
-* Now, for example let us take contest code as `624`, name your problems as `624_A.cpp`, `624_B.cpp`, . .(Case sensitive)<br>
-* Code in your favourite editor<br>
-* now, for testing your solution just `gocf 624_A.cpp` <br>
+##Asciinema
 
-**That's it!**<br>
+[![asciicast](https://asciinema.org/a/50588.png)](https://asciinema.org/a/50588)
 
-*Star it* <br>
+##That's it.
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sukeesh/gocf/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+© [ Sukeesh ]
