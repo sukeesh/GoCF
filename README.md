@@ -3,11 +3,11 @@
 
 ## Requirements
 
-* Python v2/3 
+* Python v3 
 * [Python Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)<br>
 * [Colorama](https://pypi.python.org/pypi/colorama)<br>
 
->Tested on Linux Ubuntu 14.04, Elementary OS Freya.
+>Tested on Linux Ubuntu 20.04, Elementary OS Freya.
 
 ## Installation
 
@@ -29,4 +29,4 @@
 
 ## That's it.
 
-© [Sukeesh](http://sukeesh.github.io)
+© [Sukeesh](http://sukeesh.github.io), [Arpa](https://www.linkedin.com/in/arpaa).
